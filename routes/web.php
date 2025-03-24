@@ -16,5 +16,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/posts', Index::class)->name('posts.index');
+    // Route::get('/posts', Index::class)->name('posts.index'); // tanpa role
+
+    // hanya user dengan role siswa yang bisa akses
+    Route::get('/posts', Index::class)->name('posts.index')->middleware('role:Siswa');
 });
