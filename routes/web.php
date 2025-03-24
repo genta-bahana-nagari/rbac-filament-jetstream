@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Posts\Index;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,4 +15,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/posts', Index::class)->name('posts.index');
 });
