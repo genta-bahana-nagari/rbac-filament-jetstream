@@ -45,13 +45,12 @@ php artisan key:generate
 ### 5️⃣ **Set Up Database**
 Make sure your `.env` file has the correct database credentials, then run:
 ```sh
-php artisan migrate --seed
+php artisan migrate
 ```
-> The `--seed` flag ensures that default roles and permissions are created.
 
 ### 6️⃣ **Set Up Storage & Permissions**
 ```sh
-php artisan storage:link
+php artisan storage:link # optional, you can skip this because I'm not using any media in database.
 chmod -R 775 storage bootstrap/cache # if you use Linux
 ```
 
@@ -61,13 +60,16 @@ php artisan shield:install
 ```
 You may also need to run:
 ```sh
-php artisan shield:generate
+php artisan shield:generate --all
 ```
 to create default permissions.
 
 ### 8️⃣ **Run the Application**
 ```sh
 php artisan serve
+```
+```sh
+npm run dev
 ```
 Now, open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
 
@@ -83,7 +85,7 @@ Now, open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
 ## 🔧 **Useful Commands**
 Run migrations with fresh data:
 ```sh
-php artisan migrate:fresh --seed
+php artisan migrate:fresh
 ```
 Compile assets for production:
 ```sh
