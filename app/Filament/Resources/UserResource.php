@@ -36,11 +36,12 @@ class UserResource extends Resource
                 ->maxLength(255),
 
             Forms\Components\TextInput::make('password')
+                ->label('Password')
                 ->password()
                 ->required()
                 ->maxLength(255)
                 ->dehydrateStateUsing(fn ($state) => bcrypt($state))
-                ->hiddenOn('edit'), // Jangan tampilkan password di edit
+                ->nullable(), // Jangan tampilkan password di edit
 
             Select::make('roles')
                 ->label('Role')
