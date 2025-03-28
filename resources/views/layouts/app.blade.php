@@ -34,7 +34,11 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                @if (isset($slot))
+                    {{ $slot }}
+                @elseif(View::hasSection('content'))
+                    @yield('content')
+                @endif
             </main>
         </div>
 
