@@ -1,8 +1,4 @@
-@extends('layouts.app')
-
-@section('title', 'Access Denied')
-
-@section('content')
+<x-app-layout>
     <section class="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 to-gray-300 dark:from-gray-800 dark:to-gray-900">
         <!-- Animated Background Circles -->
         <div class="absolute inset-0 flex items-center justify-center -z-10">
@@ -24,4 +20,4 @@
             </a>
         </div>
     </section>
-@endsection
+</x-app-layout>
