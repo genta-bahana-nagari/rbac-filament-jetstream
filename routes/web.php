@@ -20,4 +20,5 @@ Route::middleware([
 
     // hanya user dengan role siswa yang bisa akses
     Route::get('/posts', Index::class)->name('posts.index')->middleware('role:Siswa');
+    
 });
