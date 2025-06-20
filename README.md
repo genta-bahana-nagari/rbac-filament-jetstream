@@ -14,8 +14,8 @@ Follow these steps to set up the project after cloning from GitHub.
 
 ### 1️⃣ **Clone the Repository**
 ```sh
-git clone https://github.com/genta-bahana-nagari/ukk_fullstack.git
-cd ukk_fullstack # or your repo directory
+git clone https://github.com/genta-bahana-nagari/rbac-filament-jetstream.git
+cd rbac-filament-jetstream
 ```
 
 ### 2️⃣ **Install Dependencies**
